@@ -1,11 +1,19 @@
 {
   "name": "v-mobile-area-selector",
   "version": "0.1.0",
-  "private": true,
+  "private": false,
   "scripts": {
     "serve": "vue-cli-service serve",
     "build": "vue-cli-service build",
-    "lint": "vue-cli-service lint"
+    "lint": "vue-cli-service lint",
+    "lib": "vue-cli-service build --target lib --name v-mobile-area-selector --dest lib packages/index.js"
+  },
+  "description": "用于手机端地址选择的UI组件，支持滑动选择，数据级联变化",
+  "main": "lib/v-mobile-area-selector.umd.min.js ",
+  "keywords": ["vue", "mobile", "area", "area-selector"],
+  "author": {
+    "name": "mistake1px",
+    "email": "zz6210zz@163.com"
   },
   "dependencies": {
     "core-js": "^3.6.4",
@@ -18,8 +26,15 @@
     "babel-eslint": "^10.1.0",
     "eslint": "^6.7.2",
     "eslint-plugin-vue": "^6.2.2",
+    "less": "^3.11.1",
+    "less-loader": "^5.0.0",
     "vue-template-compiler": "^2.6.11"
   },
+  "repository": {
+    "type" : "git",
+    "url" : "git@github.com:mistake1px/v-mobile-area-selector.git"
+  },
+  "homepage": "https://github.com/mistake1px/v-mobile-area-selector",
   "eslintConfig": {
     "root": true,
     "env": {
@@ -35,8 +50,8 @@
     "rules": {}
   },
   "browserslist": [
-    "> 1%",
-    "last 2 versions",
-    "not dead"
-  ]
+    "ios 7",
+    "android 4"
+  ],
+  "license": "MIT"
 }
